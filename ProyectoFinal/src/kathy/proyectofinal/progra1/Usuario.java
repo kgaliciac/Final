@@ -90,4 +90,9 @@ public class Usuario {
 			
 		}
 
+		public Object getCarne() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 	}

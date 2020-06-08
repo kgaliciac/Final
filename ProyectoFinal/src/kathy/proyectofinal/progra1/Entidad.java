@@ -8,11 +8,11 @@ public class Entidad {
 	private int indice;
 	private String nombre;
 	private int cantidad;
-	private long posicion; //posicion donde inician sus atributos
+	private long posicion; //posicion donde inician sus Atributo
 	private byte[] bytesNombre;
 	private int bytes = 1; //inicia en uno que representa el cambio de linea
 	
-	private List<Atributo> atributos;
+	private List<Atributo> Atributo;
 
 	/**
 	 * @return the indice
@@ -71,32 +71,32 @@ public class Entidad {
 	}
 
 	/**
-	 * @return the atributos
+	 * @return the Atributo
 	 */
-	public List<Atributo> getAtributos() {
-		return atributos;
+	public List<Atributo> getAtributo() {
+		return Atributo;
 	}
 
 	/**
-	 * @param atributos the atributos to set
+	 * @param Atributo the Atributo to set
 	 */
-	public void setAtributos(List<Atributo> atributos) {
-		this.atributos = atributos;
+	public void setAtributo(List<Atributo> Atributo) {
+		this.Atributo = Atributo;
 	}
 	
 	public void setAtributo(Atributo atributo) {
-		if (this.atributos == null) {
-			this.atributos = new ArrayList<>();
+		if (this.Atributo == null) {
+			this.Atributo = new ArrayList<>();
 		}
-		this.atributos.add(atributo);
-		this.cantidad = this.atributos.size();
+		this.Atributo.add(atributo);
+		this.cantidad = this.Atributo.size();
 	}
 	
 	public void removeAtributo(Atributo atributo) {
-		if (this.atributos != null) {
-			if (this.atributos.size() > 0) {
-				this.atributos.remove(atributo);
-				this.cantidad = this.atributos.size();
+		if (this.Atributo != null) {
+			if (this.Atributo.size() > 0) {
+				this.Atributo.remove(atributo);
+				this.cantidad = this.Atributo.size();
 			}
 		}
 	}
@@ -120,7 +120,7 @@ public class Entidad {
 	 */
 	public int getBytes() {	
 		bytes = 1;
-		for (Atributo atributo : atributos) {
+		for (Atributo atributo : Atributo) {
 			bytes += atributo.getBytes();
 		}
 		return bytes;
@@ -128,6 +128,11 @@ public class Entidad {
 	
 	public void setBytes(int bytes) {
 		this.bytes = bytes;
+	}
+
+	public Object getAtributo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
